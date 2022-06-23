@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+  jenkins:
+    platform: linux/x86_64
+    user: root
+    image: jenkinsci/blueocean
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+    networks:
+      - jenkins-net
+
+volumes:
+  jenkins_home:
+    driver: local
+
+networks:
+  jenkins-net:
+    driver: bridge
+#    f2696226a64c470481fd2e020d0e26aa
