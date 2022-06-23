@@ -7,6 +7,7 @@ pipeline {
       steps {
 //         sh 'npm install'
             echo 'Start Build'
+            echo 'Start Build'
       }
     }
 
