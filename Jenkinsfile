@@ -1,20 +1,22 @@
 pipeline {
 
   agent any
+  tools {
+    nodejs '16.0.0'
+  }
   stages {
     stage('build') {
 
       steps {
-//         sh 'npm install'
-            echo 'Start Build'
-            echo 'Start Build'
+        echo 'Start Build'
+        sh 'npm install'
       }
     }
 
     stage('test') {
       steps {
-//         sh 'npm run test'
         echo 'Start Test'
+        sh 'npm run test'
       }
     }
 
